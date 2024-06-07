@@ -8,7 +8,7 @@ public class Pelicula {
     @Id
     @Column(name = "id_pelicula")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPelicula;
+    private Integer idPelicula;
     @Column(name = "nombre_completo")
     private String nombreCompleto;
     @Column(name = "nombre_corto")
@@ -29,11 +29,23 @@ public class Pelicula {
     public Pelicula() {
     }
 
-    public int getIdPelicula() {
+    public Pelicula(Integer idPelicula, String nombreCompleto, String nombreCorto, int existencia, String poster, String productora, boolean familiar, String reparto, String director) {
+        this.idPelicula = idPelicula;
+        this.nombreCompleto = nombreCompleto;
+        this.nombreCorto = nombreCorto;
+        this.existencia = existencia;
+        this.poster = poster;
+        this.productora = productora;
+        this.familiar = familiar;
+        this.reparto = reparto;
+        this.director = director;
+    }
+
+    public Integer getIdPelicula() {
         return idPelicula;
     }
 
-    public void setIdPelicula(int idPelicula) {
+    public void setIdPelicula(Integer idPelicula) {
         this.idPelicula = idPelicula;
     }
 
